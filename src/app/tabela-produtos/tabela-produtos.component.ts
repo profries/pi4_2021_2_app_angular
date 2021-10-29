@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabela-produtos.component.css']
 })
 export class TabelaProdutosComponent implements OnInit {
+   cont = 0;
   produtos = [
     {id:1, nome:"Prod1", preco:10},
     {id:2, nome:"Prod2", preco:20},
@@ -17,6 +18,13 @@ export class TabelaProdutosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  incrementar() {
+    this.cont++;
+  }
+  zerar() {
+    this.cont=0;
   }
 
 }
